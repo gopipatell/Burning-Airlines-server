@@ -12,6 +12,6 @@
 #
 
 class Reservation < ApplicationRecord
-  belong_to :user
-  belong_to :flight
+  belongs_to :user
+  belongs_to :flight
 end

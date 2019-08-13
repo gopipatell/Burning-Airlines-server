@@ -14,7 +14,7 @@
 #
 
 class Flight < ApplicationRecord
-  belong_to :airplane
+  belongs_to :airplane
   has_many :reservations
   has_many :users, through: :reservations
 
