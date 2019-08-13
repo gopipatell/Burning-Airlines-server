@@ -3,7 +3,7 @@
 # Table name: reservations
 #
 #  id         :bigint           not null, primary key
-#  rows       :integer
+#  rows       :string
 #  columns    :integer
 #  user_id    :integer
 #  flight_id  :integer

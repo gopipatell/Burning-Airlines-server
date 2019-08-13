@@ -2,15 +2,15 @@
 #
 # Table name: flights
 #
-#  id              :bigint           not null, primary key
-#  name            :string
-#  origin          :string
-#  destination     :string
-#  date            :date
-#  airplane_id     :integer
-#  available_seats :integer
-#  created_at      :datetime         not null
-#  updated_at      :datetime         not null
+#  id          :bigint           not null, primary key
+#  name        :string
+#  origin      :string
+#  destination :string
+#  date        :date
+#  airplane_id :integer
+#  seats       :integer
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
 #
 
 class Flight < ApplicationRecord
