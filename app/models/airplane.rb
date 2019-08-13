@@ -1,16 +1,15 @@
 # == Schema Information
 #
-# Table name: users
+# Table name: airplanes
 #
 #  id         :bigint           not null, primary key
 #  name       :string
-#  email      :text
-#  admin      :boolean
+#  rows       :integer
+#  columns    :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
 #
 
-class User < ApplicationRecord
-  has_many :reservations
-  has_many :flights, through: :reservations
+class Airplane < ApplicationRecord
+  has_many :flights
 end
