@@ -39,9 +39,9 @@ puts "Flight2 airplane is: #{flight2.airplane.name}"
 puts "Flight3 airplane is: #{flight3.airplane.name}"
 
 User.destroy_all
-user1 = User.create(name: "Gopi", admin: true)
-user2 = User.create(name: "Pleng", admin: false)
-user3 = User.create(name: "Ludo", admin: false)
+user1 = User.create(name: "Gopi", email: "gopi@ga.co", admin: true)
+user2 = User.create(name: "Pleng", email: "pleng@ga.co", admin: false)
+user3 = User.create(name: "Ludo", email: "ludo@ga.co", admin: false)
 
 puts "\nUser count: #{User.all.length}"
 puts "User names: #{User.all.pluck("name")}"
