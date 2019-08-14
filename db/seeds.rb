@@ -9,9 +9,9 @@
 # AIRPLANES
 Airplane.destroy_all
 
-airplane1 = Airplane.create(name: '100GA', rows: 5, columns: 10)
-airplane2 = Airplane.create(name: '200GA', rows: 4, columns: 10)
-airplane3 = Airplane.create(name: '420GA', rows: 4, columns: 8)
+airplane1 = Airplane.create(name: '757', rows: 3, columns: 10)
+airplane2 = Airplane.create(name: '747', rows: 3, columns: 10)
+airplane3 = Airplane.create(name: '756', rows: 3, columns: 10)
 
 # Check plane length
 puts "Airplane count: #{Airplane.all.length}"
@@ -20,9 +20,9 @@ puts "Airplane names: #{Airplane.all.pluck("name")}"
 # FLIGHT
 Flight.destroy_all
 
-flight1 = Flight.create(name: '1', origin: 'SYD', destination: 'MEL', date: '2019-08-20')
-flight2 = Flight.create(name: '2', origin: 'HKG', destination: 'SIN', date: '2019-08-25')
-flight3 = Flight.create(name: '3', origin: 'HKG', destination: 'MAS', date: '2019-08-20')
+flight1 = Flight.create(name: '1', available_seats: 30, origin: 'SYD', destination: 'MEL', date: '2019-08-20')
+flight2 = Flight.create(name: '2', available_seats: 29, origin: 'HKG', destination: 'SIN', date: '2019-08-25')
+flight3 = Flight.create(name: '3', available_seats: 28, origin: 'HKG', destination: 'MAS', date: '2019-08-20')
 
 # Check flight length
 puts "Fight count: #{Flight.all.length}"
@@ -51,7 +51,7 @@ puts "User names: #{User.all.pluck("name")}"
 # RESERVATIONS
 Reservation.destroy_all
 reservation1 = Reservation.create({:rows => 1, :columns =>1 })
-reservation2 = Reservation.create({:rows => 4, :columns =>10 })
+reservation2 = Reservation.create({:rows => 3, :columns =>10 })
 reservation3 = Reservation.create({:rows => 2, :columns =>3 })
 
 # Check reservation length
